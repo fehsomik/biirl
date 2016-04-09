@@ -1,0 +1,39 @@
+package com.example.yurasoft.biiirl;
+
+import android.content.Context;
+import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.MediaController;
+
+import java.util.Random;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void clique(View view) {
+        Random rand = new Random();
+        int numero = rand.nextInt(2) + 1;
+        if (numero == 1) {
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.maluco);
+            mp.start();}
+        else if (numero ==2){
+            MediaPlayer mp2 = MediaPlayer.create(this, R.raw.birrl);
+            {
+                mp2.stop();
+            }
+            mp2.start();
+        }
+        else{
+            MediaPlayer mp2 = MediaPlayer.create(this, R.raw.birrl);
+            mp2.start();
+    }
+    }
+
+}
